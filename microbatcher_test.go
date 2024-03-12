@@ -3,7 +3,6 @@ package microbatcher
 import (
 	"context"
 	"errors"
-	"fmt"
 	"sync"
 	"testing"
 	"time"
@@ -148,7 +147,7 @@ func TestMicroBatcher(t *testing.T) {
 				batchesMin:    5,
 				batchesMax:    5,
 				batchResponse: "",
-				batchErr:      fmt.Sprintf("error processing batch: error in batch processor"),
+				batchErr:      "error processing batch: error in batch processor",
 			},
 		},
 		"Error - Invalid batch size provided to start MicroBatcher": {

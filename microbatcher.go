@@ -46,10 +46,10 @@ type BatchProcessor interface {
 // New creates a new MicroBatcher instance with provided configurations.
 //
 // Parameters:
-//   - batchSize: the maximum number of jobs in milliseconds to include in a batch.
+//   - batchSize: the maximum number of jobs to include in a batch.
 //   - batchIntervalMs: the maximum time interval in milliseconds until the next batch is processed and
 //     after the previous batch has been processed. The interval must be at least 5 ms.
-//   - batchTimeoutMs: the timout for calls to BatchProcessor.
+//   - batchTimeoutMs: the timout in milliseconds for calls to BatchProcessor.
 func New(batchProcessor BatchProcessor, batchSize, batchIntervalMs, batchTimeoutMs int) (*MicroBatcher, error) {
 	if batchProcessor == nil {
 		return nil, errors.New("batch processor is nil")
