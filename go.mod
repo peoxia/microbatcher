@@ -1,4 +1,4 @@
-module github.com/peoxia/micro-batcher
+module github.com/peoxia/microbatcher
 
 go 1.21.4
 
