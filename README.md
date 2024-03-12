@@ -8,15 +8,15 @@ The MicroBatcher is a Go library for grouping individual tasks into smaller batc
 
 ## Instructions
 
-The examples below describe basic set-up to start working with the library.
+The examples below describe a basic set-up to start working with the library.
 
-### 1. Download and install the package
+### Download and install the package
 
 ```shell
 go get github.com/peoxia/microbatcher
 ```
 
-### 2. Create a new MicroBatcher
+### Create a new MicroBatcher
 ```
 microbatcher, err := New(batchProcessor, batchSize, batchIntervalMs, batchProcessorTimeout)
 if err != nil
@@ -24,7 +24,7 @@ if err != nil
 }
 ```
 
-### 3. Listen to the job results channel
+### Listen to the job results channel
 ```
 jobResultCh := microbatcher.JobResults()
 go func() {
@@ -38,15 +38,15 @@ go func() {
 }()
 ```
 
-### 4. Start listening and processing jobs
+### Start listening and processing jobs
 ```
 microbatcher.ListenAndProcess()
 ```
-### 5. Submit jobs for processing
+### Submit jobs for processing
 ```
 microbatcher.SubmitJob(Job)
 ```
-### 6. Shutdown the MicroBatcher
+### Shutdown the MicroBatcher
 ```
 microbatcher.Shutdown()
 ```
