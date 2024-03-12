@@ -4,7 +4,7 @@ The MicroBatcher is a Go library for grouping individual tasks into smaller batc
 
 ## Requirements
 
-* [Golang](https://golang.org) - developed with Golang 1.21.4
+* [Go](https://golang.org) - developed with Go 1.22.1
 
 ## Instructions
 
